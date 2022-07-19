@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/backgroundmain"
+        android:layout_width="523dp"
+        android:layout_height="752dp"
+        android:rotation="-180"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toStartOf="@+id/am_rv_note"
+        app:layout_constraintHorizontal_bias="0.089"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:srcCompat="@drawable/biruuu" />
+
+    <TextView
+        android:id="@+id/tulisanTodolist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:text="To do List"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search"></TextView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleview_kanan"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tulisanTodolist"
+        app:layout_constraintVertical_bias="0.0"
+        android:orientation="horizontal"
+        tools:itemCount="3"
+        tools:listitem="@layout/template_recycle_atas" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/am_rv_note"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="@id/backgroundmain"
+        app:layout_constraintTop_toBottomOf="@id/listNotes"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="-50dp"
+        tools:listitem="@layout/template_item" >
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <EditText
+        android:id="@+id/search"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="76dp"
+        android:drawableStart="@drawable/ic_baseline_search_24"
+        android:drawablePadding="8dp"
+        android:hint="Find your own Notes"
+        android:padding="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="@color/blue"
+        android:clickable="true"
+        android:focusable="true"
+        android:tint="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@id/backgroundmain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/plus"
+        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddNotetodo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="@color/blue"
+        android:clickable="true"
+        android:focusable="true"
+        android:tint="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/recycleview_kanan"
+        app:srcCompat="@drawable/plus"
+        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
+
+
+    <ImageView
+        android:id="@+id/logonotes"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/notes" />
+
+    <TextView
+        android:id="@+id/Judul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:text="NoteZ"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toEndOf="@+id/logonotes"
+        app:layout_constraintTop_toTopOf="@id/logonotes"></TextView>
+
+    <Button
+        android:id="@+id/buttonTheme"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:backgroundTint="@color/white"
+        android:drawableLeft="@drawable/ic_baseline_color_lens_24"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toEndOf="@+id/search"
+        app:layout_constraintTop_toTopOf="@id/search" />
+
+    <Button
+        android:id="@+id/buttonGrid"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="@color/white"
+        android:drawableTop="@drawable/ic_baseline_grid_view_24"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toEndOf="@+id/buttonList"
+        app:layout_constraintTop_toBottomOf="@id/recycleview_kanan" />
+
+    <Button
+        android:id="@+id/buttonList"
+        android:layout_width="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="56dp"
+        android:backgroundTint="@color/white"
+        android:drawableTop="@drawable/ic_baseline_view_list_24"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recycleview_kanan" />
+
+    <TextView
+        android:id="@+id/listNotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:text="List Notes"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recycleview_kanan"></TextView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

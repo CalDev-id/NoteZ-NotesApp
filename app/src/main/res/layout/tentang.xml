@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+>
+
+    <TextView
+        android:id="@+id/text_slideshow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/biruuu"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="118dp"
+        android:layout_height="104dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/notezlogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonBack2"
+        style="@style/Widget.App.Button.OutlinedButton.IconOnly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:icon="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/notepoi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NoteZ Android"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteX="173dp"
+        tools:layout_editor_absoluteY="170dp" />
+
+    <TextView
+        android:id="@+id/ver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2.0-b21040500"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/notepoi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteX="173dp"
+        tools:layout_editor_absoluteY="170dp" />
+
+    <TextView
+        android:id="@+id/librarytitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Library yang digunakan"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ver" />
+
+    <TextView
+        android:id="@+id/library"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="50dp"
+        android:text="Kotlin, Onesignal Android SDK OkHttp Retrofit RxJava RxAndroid Glide jsoup Glide Transformations Auto Image Slider Simple Search View Smart Recycler Adapter FlexboxLayout"
+        android:textColor="@color/white"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/librarytitle"
+        app:layout_constraintTop_toBottomOf="@id/librarytitle" />
+
+    <TextView
+        android:id="@+id/dibangun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Dibangun Dengan"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/library" />
+
+    <ImageView
+        android:id="@+id/kotlin"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/kotlin_icon"
+        app:layout_constraintStart_toStartOf="@id/dibangun"
+        app:layout_constraintTop_toBottomOf="@id/dibangun" />
+
+    <TextView
+        android:id="@+id/textkotlin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kotlin"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintStart_toEndOf="@id/kotlin"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="@id/kotlin"
+        tools:layout_editor_absoluteX="38dp" />
+
+    <ImageView
+        android:id="@+id/androstdio"
+        android:layout_width="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_height="15dp"
+        android:src="@drawable/androidstdio"
+        app:layout_constraintStart_toEndOf="@id/textkotlin"
+        app:layout_constraintTop_toTopOf="@id/kotlin" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Android Studio"
+        app:layout_constraintStart_toEndOf="@id/androstdio"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="@id/kotlin"
+        tools:layout_editor_absoluteX="116dp" />
+
+    <TextView
+        android:id="@+id/terimkasih"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Ucapan Terima Kasih Kepada beta tester pnj (#app-beta-tester)"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintStart_toStartOf="@id/kotlin"
+        app:layout_constraintTop_toBottomOf="@id/androstdio" />
+
+    <TextView
+        android:id="@+id/andra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="-Andra Rizki Pratama (210741043)"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/terimkasih"
+        app:layout_constraintTop_toBottomOf="@id/terimkasih" />
+
+    <TextView
+        android:id="@+id/sarbin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="-Nibras Alyassar (210741035)"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/terimkasih"
+        app:layout_constraintTop_toBottomOf="@id/andra" />
+    <TextView
+        android:id="@+id/malulana"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="-Ahmad Malulana (210741073)"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/terimkasih"
+        app:layout_constraintTop_toBottomOf="@id/sarbin" />
+    <TextView
+        android:id="@+id/hekal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="-M. Haikal Arrasyid (210741024)"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/terimkasih"
+        app:layout_constraintTop_toBottomOf="@id/malulana" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
